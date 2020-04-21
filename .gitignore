@@ -6,9 +6,4 @@ pyenv/*
 build/*
 cmake-build-*/*
 
-*.bin
-*.pt
-*.tsv
-*.png
-
 results/*

@@ -13,6 +13,8 @@ SACR, LASI, RASI, LTHI, RTHI, LKNE, RKNE, LTIB, RTIB, LANK, RANK, LTOE, RTOE
 
 IMPORTANT: this project uses submodules! Make sure to include the `--recursive` flag.
 
+You should also use a C++17 compiler with the <filesystem> library included.
+
 ```
 git clone https://github.com/snumrl/c3d-to-bvh --recursive
 cd c3d-to-bvh

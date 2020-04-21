@@ -82,19 +82,6 @@ public:
         cameraTransform->move({0.0f, 1.0f, 0.0f});
 
         // cameraTransform->rotate(M_PI/4, {0.0f, 1.0f, 0.0f});
-
-        Ref<Image> checkerImage = Image::fromFile("resources/textures/checker.png");
-        Ref<Texture> planeTexture = Texture::fromImage(checkerImage);
-        checkerImage.reset();
-
-        groundMat = Resources::make<PhongMaterial>();
-        groundMat->ambient = {0.1f, 0.1f, 0.1f, 1.0f};
-        groundMat->specular = {0.7f, 0.7f, 0.7f, 1.0f};
-        groundMat->shininess = 32.0f;
-        groundMat->texDiffuse = planeTexture;
-        groundMat->texSpecular = {};
-
-        groundMesh = Mesh::makePlane(1000.0f, 1000.0f);
     }
 
     void processInput(SDL_Event& event) override {
@@ -139,11 +126,6 @@ public:
 
         drawImGui();
         motionClipPlayer.renderImGui();
-        ImGui::Checkbox("Modify Joints", &modifyJoints);
-        if (modifyJoints) {
-            auto& pose = motionClipPlayer.getPoseState();
-            renderPoseImGui(pose, bvh.poseTree);
-        }
     }
 
     void release() override {
@@ -162,15 +144,6 @@ public:
     }
 
 private:
-    ImGui::ScatterPlotDetails scatter;
-    GLuint fbo;
-    GLuint rbo;
-    Ref<Texture> renderTexture;
-    Ref<Shader> screenShader;
-
-    Ref<PhongMaterial> groundMat;
-    Ref<Mesh> groundMesh;
-
     ga::PointMotionClip pointMotionClip;
     ga::PointMotionClip refMotionClip;
     MotionClipData bvh;

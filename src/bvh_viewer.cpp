@@ -127,7 +127,6 @@ public:
 
         drawImGui();
         motionClipPlayer->renderImGui();
-
     }
 
     void release() override {
