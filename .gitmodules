@@ -1,0 +1,6 @@
+[submodule "deps/c3dfile"]
+	path = deps/c3dfile
+	url = https://github.com/lasagnaphil/c3dfile
+[submodule "deps/gengine"]
+	path = deps/gengine
+	url = https://github.com/lasagnaphil/gengine
