@@ -49,6 +49,20 @@ Views bvh and c3d files.
 bvh_viewer <filename>
 ```
 
+## References
+
+- Vicon 2.5 Documentation
+
+https://docs.vicon.com/display/Nexus25/Lower+body+kinematics#Lowerbodykinematics-DynamicKJC
+
+- PyCGM2 documentation
+
+https://pycgm2.github.io/pages/CGM10.html
+
+- *A gait analysis data collection and reduction technique*
+
+https://www.sciencedirect.com/science/article/pii/016794579190046Z
+
 ## License (MIT)
 
 Copyright 2020 Philsik Chang
