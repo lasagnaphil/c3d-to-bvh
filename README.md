@@ -11,9 +11,17 @@ SACR, LASI, RASI, LTHI, RTHI, LKNE, RKNE, LTIB, RTIB, LANK, RANK, LTOE, RTOE
 
 ## To run
 
-IMPORTANT: this project uses submodules! Make sure to include the `--recursive` flag.
+IMPORTANT: this project uses Git submodules! Make sure to include the `--recursive` flag.
 
 You should also use a C++17 compiler with the std::filesystem library included.
+
+Before installing, you need to install SDL2: (Example below for Ubuntu)
+
+```
+sudo apt install libsdl2-dev
+```
+
+Then to compile:
 
 ```
 git clone https://github.com/snumrl/c3d-to-bvh --recursive
